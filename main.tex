@@ -5,6 +5,10 @@
 \begin{document}
 
 \maketitle
+
+\begin{abstract}
+  This is a simple paragraph at the beginning of the document. A brief introduction about the main subject.
+\end{abstract}
  
 We have now added a title, author and date to our first \LaTeX{} document!
 
@@ -21,7 +25,7 @@ This is an \emph{emphasized} word inside normal text. \textit{And this is an \em
 \newpage
 
 \textbf{Full width image:}
-\\ % starts a new paragraph.
+\\ % break line: starts a new line (also `\newline`).
 \includegraphics[width=\linewidth]{image-1}
 
 \textbf{Image with max height:}
@@ -63,5 +67,14 @@ You can reference the figure \ref{fig:image1}. Also, you can reference the page 
   \item The text in the entries may be of any length.
   \item \blindtext
 \end{enumerate}
+
+\textbf{Aligned text:}
+\begin{center}
+  Example 1: This text is an example of Center Alignment using the center environment. You can also use \verb|flushleft| and \verb|flushright|.
+\end{center}
+
+\textbf{New Paragraph:}
+This is the text in first paragraph. This is the text in first paragraph. This is the text in first paragraph. \par
+This is the text in second paragraph. This is the text in second paragraph. This is the text in second paragraph.
 
 \end{document}
