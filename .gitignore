@@ -2,3 +2,5 @@ main.*
 !main.tex
 
 preamble.aux
+
+.DS_Store
