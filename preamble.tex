@@ -2,21 +2,45 @@
 
 \usepackage[utf8]{inputenc}
 
+% TL;DR: Times-New-Roman-like font for Latex
+% https://ctan.org/pkg/mathptmx?lang=en
+\usepackage{mathptmx}
+
 % Can be changed according to your requirements
-% \usepackage[english]{babel}
+\usepackage[english]{babel}
+\selectlanguage{english}
 
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 
+\usepackage{subcaption}
+
 % Generates random content to fill this template
 \usepackage{blindtext}
+\usepackage{lipsum}
 
 % Only (useful) for testing
 \usepackage{showframe}
 
+\usepackage{listings}
+\usepackage{color}
+\definecolor{codebackcolor}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{codestyle}{
+    backgroundcolor=\color{codebackcolor},
+    basicstyle=\footnotesize\ttfamily,
+    breakatwhitespace=false,
+    breaklines=true,
+    keepspaces=true,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=4
+}
+ 
+\lstset{style=codestyle}
 
-\title{Thesis Template UPF}
+\title{UPF Thesis Template in \LaTeX{}}
 \author{Mau Muñoz}
 \date{July 2019}
-% To update th date at the time you compile your document:
+% To update the date at the time you compile your document
 % \date{\today}

@@ -1,53 +1,27 @@
-% Template Created by Mau Muñoz (https://github.com/maumchaves) following the specification for thesis documents provided by the Universitat Pompeu Fabra, Barcelona (https://guiesbibtic.upf.edu/tesis/eng/writing).
+% Template Created by Mau Muñoz (https://github.com/maumchaves) following the
+% specification for thesis documents provided by the Universitat Pompeu Fabra,
+% Barcelona (https://guiesbibtic.upf.edu/tesis/eng/writing).
 
 \include{preamble}
 
 \begin{document}
 
-\maketitle
+  \maketitle
 
-\begin{abstract}
-  This is a simple paragraph at the beginning of the document. A brief introduction about the main subject.
-\end{abstract}
- 
-We have now added a title, author and date to our first \LaTeX{} document!
+  \include{sections/abstract}
 
-Some of the \textbf{greatest}
-discoveries in \underline{science} 
-were made by \textbf{\textit{accident}}.
+  \tableofcontents
+  \thispagestyle{empty}
+  \clearpage
 
-This is an \emph{emphasized} word inside normal text. \textit{And this is an \emph{emphasized} word inside an italicized text.}
+  \listoffigures
+  \thispagestyle{empty}
+  \clearpage
 
-\textbf{Baseline image:}
+  \pagenumbering{arabic}
 
-\blindtext\includegraphics[height=\baselineskip]{image-1}.
-
-\newpage
-
-\textbf{Full width image:}
-\\ % break line: starts a new line (also `\newline`).
-\includegraphics[width=\linewidth]{image-1}
-
-\textbf{Image with max height:}
-\\
-\includegraphics[height=3cm]{image-1}
-
-\newpage
-
-\textbf{Images in a grid:}
-\\
-\includegraphics[width=.3\linewidth]{image-1}\quad\includegraphics[width=.3\linewidth]{image-2}\quad\includegraphics[width=.3\linewidth]{image-3}
-\\[\baselineskip]% adds vertical line spacing
-\includegraphics[width=.3\linewidth]{image-1}\quad\includegraphics[width=.3\linewidth]{image-2}\quad\includegraphics[width=.3\linewidth]{image-3}
-
-\textbf{Centering image with caption:}
-\\
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.5\textwidth]{image-1}
-  \caption{a nice plot}
-  \label{fig:image1}
-\end{figure}
+  \include{chapters/handbook}
+  \include{chapters/example}
 
 \textbf{Reference a figure:}
 
@@ -76,5 +50,11 @@ You can reference the figure \ref{fig:image1}. Also, you can reference the page 
 \textbf{New Paragraph:}
 This is the text in first paragraph. This is the text in first paragraph. This is the text in first paragraph. \par
 This is the text in second paragraph. This is the text in second paragraph. This is the text in second paragraph.
+\\ % break line: starts a new line (also `\newline`).
+This is the text in second paragraph. This is the text in second paragraph. This is the text in second paragraph.
+
+\begin{verbatim}
+  \textbf{New Paragraph:}
+\end{verbatim}
 
 \end{document}
