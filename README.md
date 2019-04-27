@@ -1,4 +1,4 @@
-# UPF Thesis Latex Template
+# UPF Thesis Template in Latex
 
 ## Credits
 
