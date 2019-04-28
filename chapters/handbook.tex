@@ -1,10 +1,135 @@
 \chapter{Handbook}
+\label{chap:handbook}
  
 \section{Chapters}
 
-\section{Paragraphs}
+\subsection{Adding a new chapter}
 
-\section{Citation}
+To add a new chapter, follow the next steps:
+
+\begin{enumerate}
+  \item Create a new file in the \verb|chapters| folder and name this file using \verb|dash-case|, meaning that every word in the file name is\\\verb|lowecase-and-separated-with-dashes|.
+  \item Go to the \verb|main.tex| file and find the "\verb|% CHAPTERS|" comment.\\Check how other chapters have been included as an example.
+  \item Include your new chapter as follows:
+  \begin{lstlisting}
+    \include{chapters/you-new-chapter}\end{lstlisting}
+  \item Go to your chapter file and paste the following basic code:
+  \begin{lstlisting}
+    \chapter{New Chapter}
+
+    % use to be referenced
+    \label{chap:<chapterLabel>}
+ 
+    \section{First Section}
+    
+    Your section content here.
+    
+    \section{Second Section}
+    
+    Your section content here.
+    
+    \subsection{First Subsection}
+
+    Your subsection content here.
+
+    \subsubsection{First Subsubsection}
+
+    Your subsubsection content here.
+    
+    \section*{Unnumbered Section}
+
+    Your unnumbered section content here.\end{lstlisting}
+  \item Your can find a similar code in the \verb|chapters/example.tex| file. It might be easier for you to copy it from there. Got to the chapter \ref{chap:example} (Example) to see how it looks like.
+\end{enumerate}
+
+\subsection{Reference chapters}
+
+You can dynamically reference a chapter as in \textbf{chapter \ref{chap:handbook}} (this chapter). References will be properly updated if something change with the chapter page.
+
+\begin{lstlisting}
+  % Reference a chapter
+  \ref{fig:<chapterLabel>}
+\end{lstlisting}
+
+\section{Text and Paragraphs}
+
+\subsection{New line}
+
+Use \verb|\\| or \verb|\newline| to create a new line - equivalent to \verb|Shift+Enter|. Care should be taken that multiple \verb|new lines| are not used to "simulate" paragraphs with larger spacing between them.
+
+\begin{lstlisting}
+  This is one line.
+  \\
+  This is another line.
+  \\
+  This is one more line.
+\end{lstlisting}
+
+\subsection{New paragraph}
+
+To start a new paragraph you can just leave one line space from one text from the other in your \textbf{editor}:
+
+\begin{lstlisting}
+  % These two lines are in the same paragraph
+  This is one sentence. This is another sentence.
+  This is no more sentence.
+
+  % These two lines are in two different paragraphs
+  This is one paragraph.
+
+  This is another paragraph.
+\end{lstlisting}
+
+\bigskip
+
+You can also be explicit on creating a new paragraph using \verb|\par|:
+
+\begin{lstlisting}
+  % These two lines are in two different paragraphs
+  This is one paragraph.\par This is another paragraph.
+\end{lstlisting}
+
+\subsection{Alignment}
+
+\begin{center}
+  This text is an example of Center Alignment (\verb|center|) using the center environment. You can also use \verb|flushleft| (left alignment) and \verb|flushright| (right alignment).
+\end{center}
+
+\begin{lstlisting}
+  \begin{center}
+    This text is an example of Center Alignment.
+  \end{center}
+\end{lstlisting}
+
+\subsection{Lists}
+
+\subsubsection{Unordered}
+
+\begin{itemize}
+  \item Lorem ipsum dolor sit amet, consectetur adipiscing elit. In finibus felis nunc, et sagittis velit consectetur eget.
+  \item Lorem ipsum dolor sit amet, consectetur adipiscing elit. In finibus felis nunc, et sagittis velit consectetur eget.
+\end{itemize}
+
+\begin{lstlisting}
+  \begin{itemize}
+    \item Your item 1.
+    \item Your item 2.
+  \end{itemize}
+\end{lstlisting}
+
+\subsubsection{Ordered}
+
+\begin{enumerate}
+  \item Lorem ipsum dolor sit amet, consectetur adipiscing elit. In finibus felis nunc, et sagittis velit consectetur eget.
+  \item Lorem ipsum dolor sit amet, consectetur adipiscing elit. In finibus felis nunc, et sagittis velit consectetur eget.
+\end{enumerate}
+
+\begin{lstlisting}
+  \begin{enumerate}
+    \item Your item 1.
+    \item Your item 2.
+  \end{enumerate}
+\end{lstlisting}
 
 \section{Font Format}
  
@@ -29,7 +154,11 @@ Some of the \textbf{greatest} discoveries in \underline{science} were made by \t
 \begin{lstlisting}
   \emph{<your text>}
 \end{lstlisting}
- 
+
+\section{Quotation}
+
+\section{References and Citations}
+
 \section{Images and Figures}
 
 \subsection{Baseline images}
@@ -98,7 +227,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec pellent
   \centering
   \includegraphics[width=0.5\textwidth]{image-1}
   \caption{This is a centered figure}
-  \label{fig:image1}
+  \label{fig:centeredFigure}
 \end{figure}
 
 \begin{lstlisting}
@@ -127,7 +256,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec pellent
     \label{fig:subim2}
   \end{subfigure}%
   \caption{This is a grid of figures with two images}
-  \label{fig:image2}
+  \label{fig:figuresGrid}
 \end{figure}
 
 \begin{lstlisting}
@@ -147,4 +276,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec pellent
     \caption{This is a grid of figures with two images}
     \label{fig:<yourFigureLabel>}
   \end{figure}
+\end{lstlisting}
+
+\subsection{Reference figures}
+
+You can dynamically reference a figure as in \textbf{figure \ref{fig:centeredFigure}} (our centered figure shown above). Also, you can reference the page where the figure currently is, in this case, it would be the page \textbf{\pageref{fig:centeredFigure}}. References will be properly updated if something change with the figure number or page.
+
+\begin{lstlisting}
+  % Reference a figure
+  \ref{fig:<figureLabel>}
+
+  % Reference a figure page
+  \pageref{fig:<figureLabel>}
 \end{lstlisting}
