@@ -6,17 +6,19 @@
 
 \begin{document}
 
-  \maketitle
+  \pagenumbering{gobble}
 
-  \include{sections/abstract}
+  \maketitle
+  \cleardoublepage
+  \maketitle
+  \cleardoublepage
 
   \tableofcontents
-  \thispagestyle{empty}
-  \clearpage
+  \cleardoublepage
 
-  \listoffigures
-  \thispagestyle{empty}
-  \clearpage
+  \include{sections/dedication}
+  \include{sections/acknowledgement}
+  \include{sections/abstract}
 
   \pagenumbering{arabic}
 
@@ -24,6 +26,8 @@
   \include{chapters/handbook}
   \include{chapters/example}
   % --
+
+  \listoffigures
 
   % Only currently used references will be added to the Bibliography
   \bibliographystyle{apalike}
