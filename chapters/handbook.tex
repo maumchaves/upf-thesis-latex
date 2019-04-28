@@ -155,9 +155,51 @@ Some of the \textbf{greatest} discoveries in \underline{science} were made by \t
   \emph{<your text>}
 \end{lstlisting}
 
-\section{Quotation}
-
 \section{References and Citations}
+
+\subsection{Quotation}
+
+\subsubsection{Display quotation}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit:
+ 
+\begin{displayquote}
+  \blindtext
+\end{displayquote}
+
+\begin{lstlisting}
+  \begin{displayquote}
+    <your text>
+  \end{displayquote}
+\end{lstlisting}
+
+\subsubsection{In-line quotation}
+
+Suspendisse nec pellentesque nunc \textquote{sed massa diam, gravida ut est sit amet, molestie viverra nunc}, lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+\begin{lstlisting}
+  \textquote{<your text>}
+\end{lstlisting}
+
+\subsection{Bibliography management}
+
+Bibliographic references are usually kept in a bibliography file whose extension is \verb|.bib|. This file consists of a list of records and fields. Each bibliography record holds relevant information for a single entry.
+
+\subsubsection{Example}
+
+\begin{lstlisting}
+  @book{latexcompanion,
+      author    = "Michel Goossens and Frank Mittelbach and Alexander Samarin",
+      title     = "The \LaTeX\ Companion",
+      year      = "1993",
+      publisher = "Addison-Wesley",
+      address   = "Reading, Massachusetts"
+  }
+\end{lstlisting}
+
+\subsection{Bibliography file generation}
+
+\subsection{Bibliography style}
 
 \section{Images and Figures}
 
