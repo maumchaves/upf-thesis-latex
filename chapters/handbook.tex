@@ -207,6 +207,21 @@ Furthermore, if you are using a modern latex editor, such as \href{https://www.o
 
 This template uses the APA Style for references and citations. If you want change it, go to the \verb|main.tex| file of this template, find the\\\verb|\bibliographystyle{apalike}| line, and change the \verb|apalike| parameter for any of the \href{https://www.overleaf.com/learn/latex/Bibtex_bibliography_styles}{supported styles} by Bibtex.
 
+\subsection{Citation}
+
+This document is an example of \texttt{thebibliography} environment using  in bibliography management. Three items are cited: \textit{The \LaTeX\ Companion} book \cite{latexcompanion}, the Einstein journal paper \cite{einstein}, and the Donald Knuth's website \cite[p.150]{knuthwebsite}. The \LaTeX\ related items are \cite{latexcompanion,knuthwebsite}.
+
+\begin{lstlisting}
+  % One reference
+  \cite{<ref-id>}
+
+  % One reference with additional info (like page)
+  \cite[<additional info>]{<ref-id>}
+
+  % Two or more references
+  \cite{<ref-id-1>,<ref-id-2>}
+\end{lstlisting}
+
 \section{Images and Figures}
 
 \subsection{Baseline images}
