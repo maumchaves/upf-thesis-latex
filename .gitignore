@@ -3,4 +3,7 @@ main.*
 
 *.aux
 
+*.bib
+!sample.bib
+
 .DS_Store
